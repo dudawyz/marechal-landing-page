@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marechal · Fine Dining</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="logo">Marechal</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#reservations">Reservations</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <h1>A table.<br><em>A memory.</em></h1>
+      <p>Portuguese fine dining · Lisbon</p>
+      <a href="#reservations" class="btn">Book a Table</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <span class="secao-label">Our Story</span>
+      <h2>Tradition Reinvented</h2>
+      <div class="divisor"></div>
+      <p>Marechal was born from the conviction that Portuguese cuisine deserves
+      a place among the world's great tables. Every dish is a careful
+      reinterpretation of recipes with centuries of history,
+      executed with contemporary technique and the finest ingredients.</p>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu">
+    <div class="container">
+      <span class="secao-label">Gastronomy</span>
+      <h2>The Menu</h2>
+
+      <!-- TABS -->
+      <div class="tabs" role="tablist" aria-label="Menu categories">
+        <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="starters" onclick="showTab('starters', event)">Starters</button>
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="mains" onclick="showTab('mains', event)">Mains</button>
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="desserts" onclick="showTab('desserts', event)">Desserts</button>
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="wines" onclick="showTab('wines', event)">Wines</button>
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="drinks" onclick="showTab('drinks', event)">Drinks</button>
+      </div>
+
+      <!-- STARTERS -->
+      <div id="starters" class="tab-content active" role="tabpanel">
+        <div class="menu-lista">
+
+          <div class="prato">
+            <div class="prato-info">
+              <h3>Veal and Bone Marrow Croquettes</h3>
+              <p>Artisan croquettes of braised veal with bone marrow, whole grain mustard and pickled red onion</p>
+              <span class="tag">Signature</span>
+            </div>
+            <span class="preco">€14</span>
+          </div>
+
+          <div class="prato">
+            <div class="prato-info">
+              <h3>Clams Bulhão Pato</h3>
+              <p>Live clams, extra virgin olive oil, garlic, fresh coriander and vinho verde</p>
+            </div>
+            <span class="preco">€18</span>
+          </div>
+
+          <div class="prato">
+            <div class="prato-info">
+              <h3>Foie Gras with Olive Oil Brioche</h3>
+              <p>Mi-cuit foie gras, moscatel jelly, artisan brioche and Algarve fleur de sel</p>
+              <span class="tag">Seasonal</span>
+            </div>
+            <span class="preco">€22</span>
+          </div>
+
+          <div class="prato">
+            <div class="prato-info">
+              <h3>Octopus Carpaccio</h3>
+              <p>Slow-cooked octopus, citrus vinaigrette, wild rocket and capers</p>
+            </div>
+            <span class="preco">€16</span>
+          </div>
+
+          <div class="prato">
+            <div class="prato-info">
+              <h3>Coastal Fish Soup</h3>
+              <p>Concentrated fresh fish broth, prawns, cockles and Alentejo bread croutons</p>
+            </div>
+            <span class="preco">€12</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- MAINS -->
+      <div id="mains" class="tab-content" role="tabpanel">
+        <div class="menu-lista">
+
+          <div class="prato">
+            <div class="prato-info">
+              <h3>Bacalhau à Marechal</h3>
+              <p>Porto salt cod loin, creamy chickpeas, 63° perfect egg, herb oil and cornbread crumble</p>
+              <span class="tag">Signature</span>
+            </div>
+            <span class="preco">€28</span>
+          </div>
+
+          <div class="prato">
+            <div class="prato-info">
+              <h3>Chargrilled Atlantic Octopus</h3>
+              <p>Atlantic octopus, crushed potatoes with chouriço, roasted pepper and premium Herdade do Esporão olive oil</p>
+            </div>
+            <span class="preco">€32</span>
+          </div>
+
+          <div class="prato">
+            <div class="prato-info">
+              <h3>Iberian Pork Secreto with Migas</h3>
+              <p>Slow-cooked Iberian pork secreto, Alentejo bread migas, green asparagus and meat jus</p>
+            </div>
+            <span class="preco">€29</span>
+          </div>
+
+          <div class="prato">
+            <div class="prato-info">
+              <h3>Atlantic Turbot</h3>
+              <p>Wild turbot, saffron velouté, sautéed baby vegetables and lemon beurre blanc</p>
+              <span class="tag">Fish of the day</span>
+            </div>
+            <span class="preco">€36</span>
+          </div>
+
+          <div class="prato">
+            <div class="prato-info">
+              <h3>Alentejo Beef Tenderloin</h3>
+              <p>30-day dry-aged tenderloin, bone marrow purée, wild mushrooms and Alentejo red wine sauce</p>
+            </div>
+            <span class="preco">€42</span>
+          </div>
+
+          <div class="prato">
+            <div class="prato-info">
+              <h3>Carabineiro Prawn Risotto</h3>
+              <p>Carnaroli rice, Algarve carabineiro prawns, concentrated bisque, butter and 36-month Parmesan</p>
+            </div>
+            <span class="preco">€38</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- DESSERTS -->
+      <div id="desserts" class="tab-content" role="tabpanel">
+        <div class="menu-lista">
+
+          <div class="prato">
+            <div class="prato-info">
+              <h3>Deconstructed Pastel de Nata Tart</h3>
+              <p>Egg yolk cream, caramelised puff pastry, cinnamon ice cream and lemon foam</p>
+              <span class="tag">Signature</span>
+            </div>
+            <span class="preco">€10</span>
+          </div>
+
+          <div class="prato">
+            <div class="prato-info">
+              <h3>São Tomé Chocolate Mousse</h3>
+              <p>72% dark chocolate, hazelnut praline, fleur de sel and extra virgin olive oil</p>
+            </div>
+            <span class="preco">€9</span>
+          </div>
+
+          <div class="prato">
+            <div class="prato-info">
+              <h3>Pudim Abade de Priscos</h3>
+              <p>Original 19th-century recipe, liquid caramel and Algarve orange sorbet</p>
+            </div>
+            <span class="preco">€9</span>
+          </div>
+
+          <div class="prato">
+            <div class="prato-info">
+              <h3>Portuguese Cheeses</h3>
+              <p>Selection of Serra da Estrela, Azeitão and São Jorge cheese, fig jam, walnuts and rosemary honey</p>
+            </div>
+            <span class="preco">€16</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- WINES -->
+      <div id="wines" class="tab-content" role="tabpanel">
+        <div class="menu-lista">
+
+          <div class="prato">
+            <div class="prato-info">
+              <h3>Esporão Reserva White 2022</h3>
+              <p>Alentejo · Antão Vaz and Arinto · Notes of peach, citrus and subtle vanilla</p>
+              <span class="tag">Glass €8 · Bottle €38</span>
+            </div>
+            <span class="preco">White</span>
+          </div>
+
+          <div class="prato">
+            <div class="prato-info">
+              <h3>Quinta do Crasto LBV 2019</h3>
+              <p>Douro · Touriga Nacional · Elegant body, silky tannins, ripe red fruits</p>
+              <span class="tag">Glass €10 · Bottle €48</span>
+            </div>
+            <span class="preco">Red</span>
+          </div>
+
+          <div class="prato">
+            <div class="prato-info">
+              <h3>Soalheiro Alvarinho 2023</h3>
+              <p>Vinho Verde · Alvarinho · Fresh, mineral, notes of passion fruit and orange blossom</p>
+              <span class="tag">Glass €7 · Bottle €34</span>
+            </div>
+            <span class="preco">Vinho Verde</span>
+          </div>
+
+          <div class="prato">
+            <div class="prato-info">
+              <h3>Niepoort Redoma Red 2020</h3>
+              <p>Douro · Blend · Elegant and complex, spices, wild berries and long finish</p>
+              <span class="tag">Bottle €65</span>
+            </div>
+            <span class="preco">Red</span>
+          </div>
+
+          <div class="prato">
+            <div class="prato-info">
+              <h3>Moscatel de Setúbal José Maria da Fonseca</h3>
+              <p>Setúbal · Moscatel · Dessert Wine · Honey, candied orange and dried figs</p>
+              <span class="tag">Glass €6</span>
+            </div>
+            <span class="preco">Moscatel</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- DRINKS -->
+      <div id="drinks" class="tab-content" role="tabpanel">
+        <div class="menu-lista">
+
+          <div class="prato">
+            <div class="prato-info">
+              <h3>Super Bock Draft Beer</h3>
+              <p>Small glass 20cl · Large glass 40cl</p>
+            </div>
+            <span class="preco">€3 · €5</span>
+          </div>
+
+          <div class="prato">
+            <div class="prato-info">
+              <h3>Castello Water</h3>
+              <p>Still or sparkling · 33cl · 75cl</p>
+            </div>
+            <span class="preco">€2 · €4</span>
+          </div>
+
+          <div class="prato">
+            <div class="prato-info">
+              <h3>Fresh Juices</h3>
+              <p>Orange, passion fruit, watermelon — freshly squeezed</p>
+            </div>
+            <span class="preco">€5</span>
+          </div>
+
+          <div class="prato">
+            <div class="prato-info">
+              <h3>Soft Drinks</h3>
+              <p>Coca-Cola, Lemonade, Tonic · 33cl</p>
+            </div>
+            <span class="preco">€3</span>
+          </div>
+
+          <div class="prato">
+            <div class="prato-info">
+              <h3>Espresso Coffee</h3>
+              <p>Delta Cafés · Single, double or decaffeinated</p>
+            </div>
+            <span class="preco">€1.5</span>
+          </div>
+
+          <div class="prato">
+            <div class="prato-info">
+              <h3>Gorreana Tea</h3>
+              <p>Azores tea, the oldest in Europe · Green or black</p>
+            </div>
+            <span class="preco">€3</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RESERVATIONS -->
+  <section id="reservations">
+    <div class="container">
+      <span class="secao-label">Book your table</span>
+      <h2>Reservations</h2>
+      <form>
+        <label for="nome">Full name</label>
+        <input type="text" id="nome" name="nome" placeholder="Full name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+        <label for="telefone">Phone</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="+351 ___ ___ ___" required>
+
+        <label for="data">Date</label>
+        <input type="date" id="data" name="data" required>
+
+        <label for="hora">Time</label>
+        <select id="hora" name="hora" required>
+          <option value="" disabled selected>Select a time</option>
+          <option value="19:00">7:00 PM — 19:00</option>
+          <option value="19:30">7:30 PM — 19:30</option>
+          <option value="20:00">8:00 PM — 20:00</option>
+          <option value="20:30">8:30 PM — 20:30</option>
+          <option value="21:00">9:00 PM — 21:00</option>
+          <option value="21:30">9:30 PM — 21:30</option>
+          <option value="22:00">10:00 PM — 22:00</option>
+          <option value="22:30">10:30 PM — 22:30</option>
+          <option value="23:00">11:00 PM — 23:00</option>
+        </select>
+
+        <label for="pessoas">Number of guests</label>
+        <select id="pessoas" name="pessoas" required>
+          <option value="" disabled selected>Number of guests</option>
+          <option>1 guest</option>
+          <option>2 guests</option>
+          <option>3 guests</option>
+          <option>4 guests</option>
+          <option>5 or more — contact us</option>
+        </select>
+        <button type="submit" class="btn">Confirm Reservation</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <span class="secao-label">Find Us</span>
+      <h2>Contact</h2>
+      <div class="divisor"></div>
+      <p>📍 Rua do Alecrim, 45 · Chiado, Lisbon</p>
+      <p>📞 +351 910 000 000</p>
+      <p>✉️ reservations@marechal.pt</p>
+      <p>🕐 Tuesday to Sunday · Dinner 7pm–11pm</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Marechal · Fine Dining Lisbon · All rights reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

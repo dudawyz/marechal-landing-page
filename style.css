@@ -1,0 +1,455 @@
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  color: #f0ece4;
+  background: #0f0f0f;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* NAVIGATION */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(15,15,15,0.95);
+  padding: 1.4rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.logo {
+  font-size: 1.4rem;
+  color: #c8a96e;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+
+nav ul a {
+  color: #aaa;
+  font-family: 'Arial', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+nav ul a:hover {
+  color: #c8a96e;
+}
+
+/* HERO */
+#hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1600') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.hero-content h1 em {
+  color: #c8a96e;
+  font-style: italic;
+}
+
+.hero-content p {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 2.5rem;
+}
+
+/* BUTTON */
+.btn {
+  background: transparent;
+  color: #c8a96e;
+  padding: 0.9rem 2.8rem;
+  font-family: 'Arial', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: 1px solid #c8a96e;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: #c8a96e;
+  color: #0f0f0f;
+}
+
+/* GENERAL SECTIONS */
+section {
+  padding: 7rem 0;
+  scroll-margin-top: 80px;
+}
+
+section h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: #f0ece4;
+  letter-spacing: 0.05em;
+}
+
+.secao-label {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #c8a96e;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* ABOUT */
+#about {
+  background: #141414;
+  text-align: center;
+}
+
+#about .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#about p {
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #b0b0b0;
+  max-width: 620px;
+  margin-top: 1.5rem;
+}
+
+.divisor {
+  width: 40px;
+  height: 1px;
+  background: #c8a96e;
+  margin: 1.5rem auto;
+}
+
+/* MENU */
+#menu {
+  background: #0f0f0f;
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  gap: 0;
+  margin: 3rem 0 2.5rem;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  color: #666;
+  font-family: 'Arial', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.8rem 1.8rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: all 0.3s;
+}
+
+.tab-btn:hover {
+  color: #f0ece4;
+}
+
+.tab-btn.active {
+  color: #c8a96e;
+  border-bottom: 2px solid #c8a96e;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* DISHES */
+.menu-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.prato {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.8rem 0;
+  border-bottom: 1px solid #1e1e1e;
+  transition: all 0.3s;
+}
+
+.prato:hover {
+  padding-left: 0.5rem;
+}
+
+.prato-info h3 {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: #f0ece4;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.03em;
+}
+
+.prato-info p {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.85rem;
+  color: #9a9a9a;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.prato-info .tag {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #c8a96e;
+  margin-top: 0.4rem;
+  display: block;
+}
+
+.preco {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.95rem;
+  color: #c8a96e;
+  white-space: nowrap;
+  padding-left: 2rem;
+}
+
+/* RESERVATIONS */
+#reservations {
+  background: #141414;
+}
+
+#reservations h2 {
+  color: #c8a96e;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin-top: 2.5rem;
+}
+
+form label {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #c8a96e;
+  margin-bottom: -0.5rem;
+}
+
+form input, form select {
+  padding: 0.9rem 1.2rem;
+  border: 1px solid #2a2a2a;
+  background: #1a1a1a;
+  color: #f0ece4;
+  font-family: 'Arial', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border 0.3s;
+  color-scheme: dark;
+}
+
+form input:focus, form select:focus {
+  border-color: #c8a96e;
+}
+
+form select option {
+  background: #1a1a1a;
+}
+
+/* CONTACT */
+#contact {
+  background: #0f0f0f;
+  text-align: center;
+}
+
+#contact .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact p {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.95rem;
+  color: #b0b0b0;
+  margin-bottom: 0.8rem;
+  line-height: 1.8;
+}
+
+/* FOOTER */
+footer {
+  background: #0a0a0a;
+  text-align: center;
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: #444;
+  border-top: 1px solid #1a1a1a;
+}
+/* ============================================
+   RESPONSIVENESS
+   ============================================ */
+
+/* TABLET — up to 768px */
+@media (max-width: 768px) {
+
+  /* Stacked and centered navigation */
+  nav {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem 1.5rem;
+  }
+
+  nav ul {
+    gap: 1.4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Smaller hero */
+  .hero-content h1 {
+    font-size: 2.6rem;
+  }
+
+  /* Sections with less vertical padding */
+  section {
+    padding: 5rem 0;
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+  }
+
+  /* Tabs with horizontal scroll instead of breaking */
+  .tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab-btn {
+    padding: 0.8rem 1.2rem;
+    white-space: nowrap;
+  }
+
+  /* Dishes: price moves below the name */
+  .prato {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .preco {
+    padding-left: 0;
+  }
+}
+
+/* MOBILE — up to 480px */
+@media (max-width: 480px) {
+
+  .container {
+    padding: 0 1.2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 0.75rem;
+  }
+
+  .btn {
+    padding: 0.8rem 2rem;
+    font-size: 0.75rem;
+  }
+
+  nav {
+    padding: 0.9rem 1rem;
+  }
+
+  nav ul {
+    gap: 1rem;
+  }
+
+  nav ul a {
+    font-size: 0.7rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  section h2 {
+    font-size: 1.4rem;
+  }
+
+  .tab-btn {
+    padding: 0.7rem 1rem;
+    font-size: 0.72rem;
+  }
+}
